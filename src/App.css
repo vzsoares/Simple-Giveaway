@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+}
+
+.hero {
+  background-color: aliceblue;
+  text-align: center;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+.title {
+  font-size: 2rem;
+}
+.title h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.number-input {
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100px;
+  height: 2rem;
+  font-size: 1.5rem;
+}
+
+.number-range {
+  display: grid;
+  grid-template-columns: 200px 70px 200px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.number-range p {
+  width: 50px;
+  font-size: 1.75rem;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.number-amount {
+  display: grid;
+  grid-template-columns: [start] 200px 70px [col-1] 200px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-top: 2rem;
+}
+.amount-of-winners {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-column: start/col-1;
+  padding-left: 2rem;
+}
+.middle-space {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  width: 3rem;
+}
+
+.number-results {
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
+}
+.number-results p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.generate-winners {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.generate-winners:hover {
+  background-color: black;
+  color: white;
+}
+
+.winners {
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  max-width: 600px;
+  grid-template: 50px / auto auto auto;
+}
+.winner-block {
+  background-color: white;
+  margin: 2rem;
+  font-size: 1.5rem;
+  padding: 0.33rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 50px;
+}
+
+.github {
+  font-size: 3.5rem;
+  color: black;
+}
+.footer {
+  margin-top: 2rem;
+}
