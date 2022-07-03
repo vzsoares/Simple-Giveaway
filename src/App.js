@@ -6,18 +6,19 @@ function App() {
   const [winnersArray, setWinnersArray] = useState([]);
   const [winnersExist, setWinnersExist] = useState(false);
   function Get_winners() {
-    // variables
-    var range_start = Number($("#number-range-start").val());
-    var range_end = Number($("#number-range-end").val());
-    var amount_of_winners = Number($("#number-winners").val());
-    var winners = [];
-    // functions
+    // Variables
+    const range_start = Number($("#number-range-start").val());
+    const range_end = Number($("#number-range-end").val());
+    let amount_of_winners = Number($("#number-winners").val());
+    let winners = [];
 
+    // Functions
     // no negative number allowed
     if (range_end <= 0 || range_start < 0 || amount_of_winners <= 0) {
       window.alert("Invalid input!");
       return;
     }
+
     // avoid more winners than prize
     if (amount_of_winners >= range_end - range_start + 2) {
       $(".amount-of-winners").css("color", "red");
@@ -28,6 +29,7 @@ function App() {
       $(".amount-of-winners").css("color", "");
       $("#number-winners").css("color", "");
     }
+
     // get random number
     for (let index = 0; index < amount_of_winners; ) {
       var random = Math.round(Math.random() * range_end);
@@ -43,6 +45,7 @@ function App() {
     // get numbers for copy
     const winners_array = winners;
     setWinnersArray(winners_array.filter((x) => isFinite(x)));
+
     // insert winners in DOM
     winners.forEach((e) => {
       winners.push(`<div class='winner-block'>${e}</div>`);
@@ -50,11 +53,13 @@ function App() {
     $(".winners").html(winners.filter((x) => isNaN(x)).join(""));
     setWinnersExist(true);
   }
+
   // copy to clipboard and alert user
   const copyWinners = () => {
     navigator.clipboard.writeText(winnersArray.join());
     alert("Winners Copied!!!");
   };
+
   return (
     <div className='App'>
       <div className='hero'>
